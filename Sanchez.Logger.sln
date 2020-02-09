@@ -8,6 +8,14 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger", "Sanchez.L
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Sinks.Console", "Sanchez.Logger.Sinks.Console\Sanchez.Logger.Sinks.Console.fsproj", "{49180B91-4A81-418E-ACD1-97E9F55D506C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sinks", "Sinks", "{436DD1FD-FE0A-4241-823C-1678BCE97EBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{6CFE1272-D5E7-4579-8288-FC634F4B18F6}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Providers.Timestamp", "Sanchez.Logger.Providers.Timestamp\Sanchez.Logger.Providers.Timestamp.fsproj", "{1E08D7DE-BBFF-4AE4-A270-03C20112BB07}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Providers.Scope", "Sanchez.Logger.Providers.Scope\Sanchez.Logger.Providers.Scope.fsproj", "{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +38,18 @@ Global
 		{49180B91-4A81-418E-ACD1-97E9F55D506C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49180B91-4A81-418E-ACD1-97E9F55D506C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49180B91-4A81-418E-ACD1-97E9F55D506C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E08D7DE-BBFF-4AE4-A270-03C20112BB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E08D7DE-BBFF-4AE4-A270-03C20112BB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E08D7DE-BBFF-4AE4-A270-03C20112BB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E08D7DE-BBFF-4AE4-A270-03C20112BB07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{49180B91-4A81-418E-ACD1-97E9F55D506C} = {436DD1FD-FE0A-4241-823C-1678BCE97EBF}
+		{1E08D7DE-BBFF-4AE4-A270-03C20112BB07} = {6CFE1272-D5E7-4579-8288-FC634F4B18F6}
+		{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB} = {6CFE1272-D5E7-4579-8288-FC634F4B18F6}
 	EndGlobalSection
 EndGlobal

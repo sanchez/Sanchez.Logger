@@ -10,7 +10,7 @@ let main argv =
     
     let factory =
         LoggerFactory.CreateFactory()
-        |> Sinks.Console.AddSink
+        |> LoggerFactory.AddSink Sinks.Console.Sink
         |> LoggerFactory.BuildLogger
         
     factory Debug "Hello World"
