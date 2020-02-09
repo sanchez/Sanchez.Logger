@@ -1,7 +1,6 @@
 ﻿module Sanchez.Logger.Sinks.Console
 
 open Sanchez.Logger.Abstraction
-open Sanchez.Logger.Abstraction
 
 let Sink (level: LogLevel) (message: string) =
     let appendStatus (status: string) =
