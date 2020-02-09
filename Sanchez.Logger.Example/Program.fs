@@ -1,16 +1,20 @@
-﻿// Learn more about F# at http://fsharp.org
-
-open Sanchez.Logger
-open Sanchez.Logger
+﻿open Sanchez.Logger
 open Sanchez.Logger.Abstraction
-open System
+open Sanchez.Logger.Sinks.File
 
 [<EntryPoint>]
 let main argv =
+    let fileConfiguration = { FileConfiguration.fileLocation = None }
+    let file2Configuration = { FileConfiguration.fileLocation = "log.txt" |> Some }
     
     let factory =
         LoggerFactory.CreateFactory()
-        |> LoggerFactory.AddSink Sinks.Console.Sink
+        |> LoggerFactory.AddProvider (Providers.Scope.Provider "Example")
+        |> LoggerFactory.AddProvider (Providers.Timestamp.Provider None)
+        |> LoggerFactory.AddProvider (Providers.LogLevel.Provider)
+        |> LoggerFactory.AddSink (Sinks.Console.Sink "$timestamp [$loglevel] ($scope)")
+        |> LoggerFactory.AddSink (Sinks.File.Sink fileConfiguration)
+        |> LoggerFactory.AddSink (Sinks.File.Sink file2Configuration)
         |> LoggerFactory.BuildLogger
         
     factory Debug "Hello World"

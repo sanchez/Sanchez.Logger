@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\dfitz\.Rider2019.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\dfitz\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\dfitz\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Sanchez.Logger.471607904.00" t="ExcludeRecursive" />
-    <e p="C:\Users\dfitz\Documents\git\Sanchez.Logger" t="IncludeFlat">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Sanchez.Logger.411294083.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Providers" t="Include" />
       <e p="Sanchez.Logger" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Library.fs" t="Include" />
         <e p="LoggerFactory.fs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Sanchez.Logger.fsproj" t="IncludeRecursive" />
@@ -26,27 +24,33 @@
         <e p="Program.fs" t="Include" />
         <e p="Sanchez.Logger.Example.fsproj" t="IncludeRecursive" />
       </e>
+      <e p="Sanchez.Logger.Providers.LogLevel" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LogLevelProvider.fs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Sanchez.Logger.Providers.LogLevel.fsproj" t="IncludeRecursive" />
+      </e>
       <e p="Sanchez.Logger.Providers.Scope" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Library.fs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Sanchez.Logger.Providers.Scope.fsproj" t="IncludeRecursive" />
+        <e p="ScopeProvider.fs" t="Include" />
       </e>
       <e p="Sanchez.Logger.Providers.Timestamp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Library.fs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Sanchez.Logger.Providers.Timestamp.fsproj" t="IncludeRecursive" />
+        <e p="TimestampProvider.fs" t="Include" />
       </e>
       <e p="Sanchez.Logger.Sinks.Console" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Library.fs" t="Include" />
+        <e p="ConsoleSink.fs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Sanchez.Logger.Sinks.Console.fsproj" t="IncludeRecursive" />
       </e>
       <e p="Sanchez.Logger.Sinks.File" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Library.fs" t="Include" />
+        <e p="FileSink.fs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Sanchez.Logger.Sinks.File.fsproj" t="IncludeRecursive" />
       </e>

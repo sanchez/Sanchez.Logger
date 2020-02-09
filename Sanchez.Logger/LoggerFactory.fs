@@ -11,8 +11,15 @@ let CreateFactory () =
 
 let BuildLogger (factory: ILoggerFactory) =
     let log (level: LogLevel) (message: string) =
+        let providers =
+            factory.providers
+            |> List.map (fun provider -> (provider.name, provider.handler level))
+            |> List.filter (snd >> Option.isSome)
+            |> List.map (fun (name, value) -> (name, value |> Option.get))
+            |> Map.ofList
+            
         factory.sinks
-        |> List.iter (fun x -> x level message)
+        |> List.iter (fun x -> x providers message)
         
     let handleLog (level: LogLevel) =
         Printf.ksprintf (log level)

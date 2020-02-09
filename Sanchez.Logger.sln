@@ -18,6 +18,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Providers.Sc
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Sinks.File", "Sanchez.Logger.Sinks.File\Sanchez.Logger.Sinks.File.fsproj", "{198632A5-B67A-4E73-8171-87CC7F3D7686}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Providers.LogLevel", "Sanchez.Logger.Providers.LogLevel\Sanchez.Logger.Providers.LogLevel.fsproj", "{A4130EC4-581C-4CF0-84CC-B70B0D585EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,11 +54,16 @@ Global
 		{198632A5-B67A-4E73-8171-87CC7F3D7686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{198632A5-B67A-4E73-8171-87CC7F3D7686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{198632A5-B67A-4E73-8171-87CC7F3D7686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4130EC4-581C-4CF0-84CC-B70B0D585EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4130EC4-581C-4CF0-84CC-B70B0D585EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4130EC4-581C-4CF0-84CC-B70B0D585EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4130EC4-581C-4CF0-84CC-B70B0D585EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{49180B91-4A81-418E-ACD1-97E9F55D506C} = {436DD1FD-FE0A-4241-823C-1678BCE97EBF}
 		{1E08D7DE-BBFF-4AE4-A270-03C20112BB07} = {6CFE1272-D5E7-4579-8288-FC634F4B18F6}
 		{4EA88B39-512E-4B7E-A752-2EB2F8FB43AB} = {6CFE1272-D5E7-4579-8288-FC634F4B18F6}
 		{198632A5-B67A-4E73-8171-87CC7F3D7686} = {436DD1FD-FE0A-4241-823C-1678BCE97EBF}
+		{A4130EC4-581C-4CF0-84CC-B70B0D585EE4} = {6CFE1272-D5E7-4579-8288-FC634F4B18F6}
 	EndGlobalSection
 EndGlobal

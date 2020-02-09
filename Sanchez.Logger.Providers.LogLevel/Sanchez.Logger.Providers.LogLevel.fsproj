@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="TimestampProvider.fs" />
+        <Compile Include="LogLevelProvider.fs" />
     </ItemGroup>
 
     <ItemGroup>

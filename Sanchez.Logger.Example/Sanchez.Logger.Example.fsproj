@@ -10,7 +10,11 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Sanchez.Logger.Providers.LogLevel\Sanchez.Logger.Providers.LogLevel.fsproj" />
+      <ProjectReference Include="..\Sanchez.Logger.Providers.Scope\Sanchez.Logger.Providers.Scope.fsproj" />
+      <ProjectReference Include="..\Sanchez.Logger.Providers.Timestamp\Sanchez.Logger.Providers.Timestamp.fsproj" />
       <ProjectReference Include="..\Sanchez.Logger.Sinks.Console\Sanchez.Logger.Sinks.Console.fsproj" />
+      <ProjectReference Include="..\Sanchez.Logger.Sinks.File\Sanchez.Logger.Sinks.File.fsproj" />
       <ProjectReference Include="..\Sanchez.Logger\Sanchez.Logger.fsproj" />
     </ItemGroup>
 

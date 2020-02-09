@@ -8,11 +8,27 @@ type LogLevel =
     | Info
     | Debug
     
-type ProviderPayload = { key: string option; value: string }
-type ProviderCall = LogLevel -> ProviderPayload
-type ProviderInfo = { name: string; handler: ProviderCall }
+type LogColouring =
+    | Red of string
+    | Green of string
+    | Yellow of string
+    | Blue of string
+    | Magenta of string
+    | Cyan of string
     
-type LoggerCall = LogLevel -> string -> unit
+    | Faded of string
+    
+    | Reset
+    
+type LogSymbols =
+    | Coloring of LogColouring
+    | Message of string
+    
+type Provider = LogLevel -> LogSymbols option
+type ProviderInfo = { name: string; handler: Provider }
+type ProviderMap = Map<string, LogSymbols>
+    
+type LoggerCall = ProviderMap -> string -> unit
 type Logger<'T> = LogLevel -> Printf.StringFormat<'T> -> unit
 
 type ILoggerFactory =
