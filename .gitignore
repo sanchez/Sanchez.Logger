@@ -1,3 +1,4 @@
 bin/
 obj/
 /packages/
+/Sanchez.Logger.Example/log.txt
