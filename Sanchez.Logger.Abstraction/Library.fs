@@ -38,4 +38,5 @@ type ILoggerFactory =
         sinks: LoggerCall list
         providers: ProviderInfo list
         filters: Filter list
+        childFactory: ILoggerFactory option
     }
