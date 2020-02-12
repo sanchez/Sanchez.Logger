@@ -12,4 +12,8 @@
       <ProjectReference Include="..\Sanchez.Logger.Abstraction\Sanchez.Logger.Abstraction.fsproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="FSharp.Json" Version="0.4.0" />
+    </ItemGroup>
+
 </Project>
