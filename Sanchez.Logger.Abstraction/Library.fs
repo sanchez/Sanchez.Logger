@@ -31,8 +31,11 @@ type ProviderMap = Map<string, LogSymbols>
 type LoggerCall = ProviderMap -> string -> unit
 type Logger = LogLevel -> string -> unit
 
+type Filter = LogLevel -> bool
+
 type ILoggerFactory =
     {
         sinks: LoggerCall list
         providers: ProviderInfo list
+        filters: Filter list
     }

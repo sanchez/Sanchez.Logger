@@ -7,6 +7,7 @@ let CreateFactory () =
     {
         ILoggerFactory.sinks = []
         providers = []
+        filters = []
     }
 
 let BuildLogger (factory: ILoggerFactory) (level: LogLevel) (message: string) =
@@ -17,17 +18,22 @@ let BuildLogger (factory: ILoggerFactory) (level: LogLevel) (message: string) =
         |> List.map (fun (name, value) -> (name, value |> Option.get))
         |> Map.ofList
         
-    factory.sinks
-    |> List.iter (fun x -> x providers message)
+    let shouldLog =
+        factory.filters
+        |> List.map (fun x -> x level)
+        |> List.filter not
+        |> List.isEmpty
+        |> not
+        
+    if shouldLog then
+        factory.sinks
+        |> List.iter (fun x -> x providers message)
     
 let AddSink (sink: LoggerCall) (factory: ILoggerFactory) =
-    {
-        sinks = sink::factory.sinks
-        providers = factory.providers
-    }
+    { factory with sinks = sink::factory.sinks }
     
 let AddProvider (provider: ProviderInfo) (factory: ILoggerFactory) =
-    {
-        sinks = factory.sinks
-        providers = provider::factory.providers
-    }
+    { factory with providers = provider::factory.providers }
+    
+let AddFilter (filter: Filter) (factory: ILoggerFactory) =
+    { factory with filters = filter::factory.filters }

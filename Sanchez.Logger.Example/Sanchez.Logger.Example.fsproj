@@ -10,6 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Sanchez.Logger.Filters.LogLevel\Sanchez.Logger.Filters.LogLevel.fsproj" />
       <ProjectReference Include="..\Sanchez.Logger.Providers.LogLevel\Sanchez.Logger.Providers.LogLevel.fsproj" />
       <ProjectReference Include="..\Sanchez.Logger.Providers.Scope\Sanchez.Logger.Providers.Scope.fsproj" />
       <ProjectReference Include="..\Sanchez.Logger.Providers.Timestamp\Sanchez.Logger.Providers.Timestamp.fsproj" />

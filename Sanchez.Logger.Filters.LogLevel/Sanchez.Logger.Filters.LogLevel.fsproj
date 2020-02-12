@@ -5,7 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Library.fs"/>
+        <Compile Include="Library.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Sanchez.Logger.Abstraction\Sanchez.Logger.Abstraction.fsproj" />
     </ItemGroup>
 
 </Project>

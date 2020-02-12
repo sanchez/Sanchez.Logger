@@ -18,6 +18,7 @@ let main argv =
         |> LoggerFactory.AddSink (Sinks.Console.Sink "$timestamp [$loglevel] ($scope) ")
         |> LoggerFactory.AddSink (Sinks.File.Sink fileConfiguration)
         |> LoggerFactory.AddSink (Sinks.File.Sink file2Configuration)
+        |> LoggerFactory.AddFilter (Filters.LogLevel.Filter Warning)
         |> LoggerFactory.BuildLogger
         
     factory Debug "Hello World"
