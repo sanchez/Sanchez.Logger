@@ -2,6 +2,9 @@
 open Sanchez.Logger.Abstraction
 open Sanchez.Logger.Sinks.File
 
+let exampleChildFunc (logger: Logger) =
+    logger Debug "hello there"
+
 [<EntryPoint>]
 let main argv =
     let fileConfiguration = { FileConfiguration.fileLocation = None }
@@ -22,6 +25,6 @@ let main argv =
     factory Success "This is a success level"
     factory Warning "This is a warning level"
     factory Error "This is an error level"
-    factory Critical "This is a critical error level"
+    sprintf "%d - %s" 5 "this is a critical error level" |> factory Critical
     
     0 // return an integer exit code

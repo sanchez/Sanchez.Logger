@@ -9,22 +9,16 @@ let CreateFactory () =
         providers = []
     }
 
-let BuildLogger (factory: ILoggerFactory) =
-    let log (level: LogLevel) (message: string) =
-        let providers =
-            factory.providers
-            |> List.map (fun provider -> (provider.name, provider.handler level))
-            |> List.filter (snd >> Option.isSome)
-            |> List.map (fun (name, value) -> (name, value |> Option.get))
-            |> Map.ofList
-            
-        factory.sinks
-        |> List.iter (fun x -> x providers message)
+let BuildLogger (factory: ILoggerFactory) (level: LogLevel) (message: string) =
+    let providers =
+        factory.providers
+        |> List.map (fun provider -> (provider.name, provider.handler level))
+        |> List.filter (snd >> Option.isSome)
+        |> List.map (fun (name, value) -> (name, value |> Option.get))
+        |> Map.ofList
         
-    let handleLog (level: LogLevel) =
-        Printf.ksprintf (log level)
-        
-    handleLog
+    factory.sinks
+    |> List.iter (fun x -> x providers message)
     
 let AddSink (sink: LoggerCall) (factory: ILoggerFactory) =
     {

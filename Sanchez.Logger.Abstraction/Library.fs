@@ -29,7 +29,7 @@ type ProviderInfo = { name: string; handler: Provider }
 type ProviderMap = Map<string, LogSymbols>
     
 type LoggerCall = ProviderMap -> string -> unit
-type Logger<'T> = LogLevel -> Printf.StringFormat<'T> -> unit
+type Logger = LogLevel -> string -> unit
 
 type ILoggerFactory =
     {
