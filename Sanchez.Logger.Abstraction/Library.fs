@@ -29,7 +29,12 @@ type ProviderInfo = { name: string; handler: Provider }
 type ProviderMap = Map<string, LogSymbols>
     
 type LoggerCall = ProviderMap -> string -> unit
+
 type Logger = LogLevel -> string -> unit
+module Logger =
+    let logPassthrough<'T> (logger: Logger) (level: LogLevel) (message: string) (value: 'T) =
+        logger level message
+        value
 
 type Filter = LogLevel -> bool
 

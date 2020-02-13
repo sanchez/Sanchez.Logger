@@ -24,6 +24,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Filters", "Filters", "{7BEC
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Filters.LogLevel", "Sanchez.Logger.Filters.LogLevel\Sanchez.Logger.Filters.LogLevel.fsproj", "{A8C01F17-6673-4D66-BCC5-9CED59121EBD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{48915A85-283F-4B63-A8E8-69AB1529F0B5}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.Logger.Templates.Standard", "Sanchez.Logger.Templates.Standard\Sanchez.Logger.Templates.Standard.fsproj", "{EA084DC6-FE99-4374-B234-4691892B38A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +70,10 @@ Global
 		{A8C01F17-6673-4D66-BCC5-9CED59121EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8C01F17-6673-4D66-BCC5-9CED59121EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8C01F17-6673-4D66-BCC5-9CED59121EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA084DC6-FE99-4374-B234-4691892B38A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA084DC6-FE99-4374-B234-4691892B38A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA084DC6-FE99-4374-B234-4691892B38A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA084DC6-FE99-4374-B234-4691892B38A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{49180B91-4A81-418E-ACD1-97E9F55D506C} = {436DD1FD-FE0A-4241-823C-1678BCE97EBF}
@@ -74,5 +82,6 @@ Global
 		{198632A5-B67A-4E73-8171-87CC7F3D7686} = {436DD1FD-FE0A-4241-823C-1678BCE97EBF}
 		{A4130EC4-581C-4CF0-84CC-B70B0D585EE4} = {6CFE1272-D5E7-4579-8288-FC634F4B18F6}
 		{A8C01F17-6673-4D66-BCC5-9CED59121EBD} = {7BEC8E0B-6BE6-46A2-A4E0-6FB28EFE451C}
+		{EA084DC6-FE99-4374-B234-4691892B38A7} = {48915A85-283F-4B63-A8E8-69AB1529F0B5}
 	EndGlobalSection
 EndGlobal
