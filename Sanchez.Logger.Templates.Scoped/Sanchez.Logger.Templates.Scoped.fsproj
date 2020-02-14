@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <RepositoryUrl>https://github.com/sanchez/Sanchez.Logger</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
