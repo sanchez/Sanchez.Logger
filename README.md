@@ -1,6 +1,6 @@
 # Sanchez.Logger
 
-Check out the `Sanchez.Logger.Example` for the time being, I will add more here with time
+This library is aimed to providing a functional logger for dotnet languages, in particular f#.
 
 # Definitions
 ## Sinks
