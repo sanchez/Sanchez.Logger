@@ -1,0 +1,60 @@
+name: NuGet Release
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+      
+jobs:
+  publish:
+    
+    runs-on: ubuntu-latest
+    name: Publish NuGet Packages
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1.0.0
+        with:
+          version: 3.1.100
+          source-url: https://api.nuget.org/v3/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }}
+        
+      - name: Build Entire Solution
+        run: dotnet build --configuration Release
+        
+      - name: Pack Solution
+        run: dotnet pack --configuration Release
+        
+      - name: Publish Sanchez.Logger
+        run: dotnet nuget push Sanchez.Logger/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Abstraction
+        run: dotnet nuget push Sanchez.Logger.Abstraction/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Filters.LogLevel
+        run: dotnet nuget push Sanchez.Logger.Filters.LogLevel/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Providers.LogLevel
+        run: dotnet nuget push Sanchez.Logger.Providers.LogLevel/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Providers.Scope
+        run: dotnet nuget push Sanchez.Logger.Providers.Scope/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+        
+      - name: Publish Sanchez.Logger.Providers.Timestamp
+        run: dotnet nuget push Sanchez.Logger.Providers.Timestamp/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Sinks.Console
+        run: dotnet nuget push Sanchez.Logger.Sinks.Console/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+        
+      - name: Publish Sanchez.Logger.Sinks.File
+        run: dotnet nuget push Sanchez.Logger.Sinks.File/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Templates.Scoped
+        run: dotnet nuget push Sanchez.Logger.Templates.Scoped/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+      
+      - name: Publish Sanchez.Logger.Templates.Standard
+        run: dotnet nuget push Sanchez.Logger.Templates.Standard/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
